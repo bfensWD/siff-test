@@ -15,17 +15,25 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   </head>
   <body>
-    <a-scene
-      vr-mode-ui="enabled: false"
-      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+    <iframe
+       title="AR Test"
+       frameBorder="1"
+       width="320"
+       height="160"
+       sandbox="allow-scripts"
     >
-      <a-text
-        value="This content will always face you."
-        look-at="[gps-camera]"
-        scale="120 120 120"
-        gps-entity-place="latitude: <add-your-latitude>; longitude: <add-your-longitude>;"
-      ></a-text>
-      <a-camera gps-camera rotation-reader> </a-camera>
-    </a-scene>
+      <a-scene
+        vr-mode-ui="enabled: false"
+        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+      >
+        <a-text
+          value="This content will always face you."
+          look-at="[gps-camera]"
+          scale="120 120 120"
+          gps-entity-place="latitude: <add-your-latitude>; longitude: <add-your-longitude>;"
+        ></a-text>
+        <a-camera gps-camera rotation-reader> </a-camera>
+      </a-scene>
+    </iframe>
   </body>
 </html>
