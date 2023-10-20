@@ -38,7 +38,8 @@
       x.innerHTML = "Latitude: " + position.coords.latitude +
       "<br>Longitude: " + position.coords.longitude;
     }
-    alert(navigator.geolocation)
+    const z = navigator.geolocation.getCurrentPosition(showPosition);
+    document.body.innerHTML(z)
     </script>
   <!--a-scene
       vr-mode-ui="enabled: false"
