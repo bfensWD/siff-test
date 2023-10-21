@@ -23,6 +23,12 @@
        allow="camera; microphone"
     >
   </iframe-->
+  <h1>HTML Geolocation</h1>
+  <p>Click the button to get your coordinates.</p>
+
+  <button onclick="getLocation()">Try It</button>
+
+  <p id="demo"></p>
   <script>
     const x = document.getElementById("demo");
     
@@ -38,8 +44,6 @@
       x.innerHTML = "Latitude: " + position.coords.latitude +
       "<br>Longitude: " + position.coords.longitude;
     }
-    const z = navigator.geolocation.getCurrentPosition(showPosition);
-    document.body.innerHTML = z + " <-- blah blah blah wtf";
     </script>
   <!--a-scene
       vr-mode-ui="enabled: false"
